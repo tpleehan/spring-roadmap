@@ -2,7 +2,6 @@ package hello.exception.servlet;
 
 import java.io.IOException;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
@@ -17,6 +16,11 @@ public class ServletExController {
 	@GetMapping("/error-ex")
 	public void errorEx() {
 		throw new RuntimeException("예외 발생!");
+	}
+
+	@GetMapping("error-400")
+	public void error400(HttpServletResponse response) throws IOException {
+		response.sendError(400, "400 오류!");
 	}
 
 	@GetMapping("error-404")
