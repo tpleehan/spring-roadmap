@@ -18,6 +18,18 @@ public class UnCheckedAppTest {
 			.isInstanceOf(RuntimeException.class);
 	}
 
+	@Test
+	void printEx() {
+		Controller controller = new Controller();
+
+		try {
+			controller.request();
+		} catch (Exception e) {
+			// e.printStackTrace();
+			log.info("ex", e);
+		}
+	}
+
 	static class Controller {
 		Service service = new Service();
 
@@ -64,6 +76,9 @@ public class UnCheckedAppTest {
 	}
 
 	static class RuntimeSQLException extends RuntimeException {
+		public RuntimeSQLException() {
+		}
+
 		public RuntimeSQLException(Throwable cause) {
 			super(cause);
 		}
