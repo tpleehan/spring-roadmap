@@ -30,7 +30,7 @@ public class SpringExceptionTranslatorTest {
 
 	@Test
 	void sqlExceptionErrorCode() {
-		String sql = "select bad grammer";
+		String sql = "select bad grammar";
 
 		try {
 			Connection con = dataSource.getConnection();
@@ -46,7 +46,7 @@ public class SpringExceptionTranslatorTest {
 
 	@Test
 	void exceptionTranslator() {
-		String sql = "select bad grammer";
+		String sql = "select bad grammar";
 
 		try {
 			Connection con = dataSource.getConnection();
