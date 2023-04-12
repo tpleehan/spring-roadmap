@@ -5,7 +5,7 @@
 
     <insert id="save" useGeneratedKeys="true" keyProperty="id">
         insert into item (item_name, price, quantity)
-        values(#{itemNAme}, #{price}, #{quantity})
+        values (#{itemName}, #{price}, #{quantity})
     </insert>
 
     <update id="update">
@@ -22,7 +22,7 @@
         where id = #{id}
     </select>
 
-    <select id="findAll">
+    <select id="findAll" resultType="Item">
         select id, item_name, price, quantity
         from item
         <where>
