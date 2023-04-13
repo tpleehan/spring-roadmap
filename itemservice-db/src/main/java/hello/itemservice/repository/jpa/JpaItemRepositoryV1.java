@@ -19,11 +19,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Repository
 @Transactional
-public class JpaItemRepository implements ItemRepository {
+public class JpaItemRepositoryV1 implements ItemRepository {
 
 	private final EntityManager em;
 
-	public JpaItemRepository(EntityManager em) {
+	public JpaItemRepositoryV1(EntityManager em) {
 		this.em = em;
 	}
 
