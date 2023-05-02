@@ -6,9 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
-import hello.order.v0.OrderServiceV0;
+import hello.order.v1.OrderServiceV1;
 
-@Import(OrderServiceV0.class)
+// @Import(OrderServiceV0.class)
+@Import(OrderServiceV1.class)
 @SpringBootApplication(scanBasePackages = "hello.controller")
 public class ActuatorApplication {
 
